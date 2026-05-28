@@ -10,6 +10,40 @@
 </head>
 <body>
 
+<!-- =====================================================
+     SVG BLOB DEFINITIONS
+     These are invisible — they define the clip-path shapes
+     used on the hero image, profile photo, and more.
+     The shapes match your mascot's organic rounded style.
+====================================================== -->
+<svg width="0" height="0" style="position:absolute;pointer-events:none;">
+    <defs>
+        <!-- Hero image blob — big, slightly asymmetric like mascot -->
+        <clipPath id="blob-clip" clipPathUnits="objectBoundingBox">
+            <path d="
+                M 0.18 0.04
+                C 0.38 -0.04, 0.65 -0.02, 0.84 0.10
+                C 1.02 0.22, 1.04 0.46, 0.96 0.65
+                C 0.88 0.84, 0.70 1.04, 0.50 1.01
+                C 0.30 0.98, 0.10 0.86, 0.04 0.68
+                C -0.03 0.50, 0.02 0.20, 0.18 0.04 Z
+            "/>
+        </clipPath>
+
+        <!-- Profile photo blob — taller, matches the 'portrait' mascot poses -->
+        <clipPath id="blob-profile-clip" clipPathUnits="objectBoundingBox">
+            <path d="
+                M 0.20 0.05
+                C 0.40 -0.03, 0.68 0.00, 0.82 0.12
+                C 0.98 0.26, 1.02 0.50, 0.94 0.70
+                C 0.86 0.90, 0.66 1.04, 0.46 1.00
+                C 0.26 0.96, 0.08 0.82, 0.04 0.62
+                C -0.02 0.42, 0.04 0.14, 0.20 0.05 Z
+            "/>
+        </clipPath>
+    </defs>
+</svg>
+
 <header>
     <nav>
         <div class="logo">
@@ -17,7 +51,6 @@
                 <img src="Assets/Logo%20Beige.png" alt="Logo Luca Nollet">
             </a>
         </div>
-
         <div class="nav-links">
             <a href="#over-mij">Over mij</a>
             <a href="#projecten">Projecten</a>
@@ -26,6 +59,7 @@
         </div>
     </nav>
 </header>
+
 <section class="titel">
     <div>
         <h1>Luca<br>Nollet</h1>
@@ -34,19 +68,36 @@
             Ik ontwerp en ontwikkel moderne digitale ervaringen.
             Ik wil uitgroeien tot het creatieve kompas dat merken, bedrijven en organisaties begeleidt van visie tot uitvoering en hen krachtiger en menselijker
             maakt in een visuele wereld met veel concurrenten.
-        </p>        </p>
+        </p>
         <a href="#projecten" class="btn">Bekijk projecten</a>
     </div>
     <div class="titel-afbeelding">
         <div class="vorm-wrapper">
             <div class="vorm-achter"></div>
-
             <div class="vorm">
                 <img src="Assets/HeaderFoto.jpg" alt="foto van mij">
             </div>
         </div>
     </div>
 </section>
+
+<!-- =====================================================
+     SECTION DIVIDER: hero (beige) → over mij (navy)
+     Organic blob wave — like the curved edge in your logo
+     branding panel (image 2, right side).
+====================================================== -->
+<div class="sectie-overgang">
+    <svg viewBox="0 0 1440 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="
+            M0,30
+            C120,70 260,5  420,40
+            C580,75 680,10 860,35
+            C1040,60 1160,15 1300,45
+            C1360,60 1410,50 1440,42
+            L1440,90 L0,90 Z
+        " fill="#181049"/>
+    </svg>
+</div>
 
 <section id="over-mij" class="over-mij">
     <div class="over-mij-inhoud">
@@ -57,9 +108,8 @@
                 Ik woon in Zoerle-Parwijs, een deelgemeente van Westerlo.<br>
                 Dit is mijn eerste jaar van de opleiding Digitale Vormgeving aan Hogeschool PXL in Hasselt.<br>
                 Ik had geen voorkennis, maar wel veel interesse in design en vormgeving. Daarom heb ik ervoor gekozen om deze opleiding te volgen.<br>
-                Het verdere verloop van mijn ‘carrière’ vind je in <a href="#tijdlijn"><strong>mijn tijdlijn.</strong></a><br>
+                Het verdere verloop van mijn 'carrière' vind je in <a href="#tijdlijn"><strong>mijn tijdlijn.</strong></a><br>
                 In mijn vrije tijd ben ik hoofdleider bij de Chiro van Zoerle-Parwijs. Hierbij heb ik veel vaardigheden ontwikkeld, zoals zelfstandigheid.
-                <br>
             </p>
         </div>
         <div class="over-mij-afbeelding-div">
@@ -67,7 +117,6 @@
                 <img src="Assets/PersoonlijkeFoto.jpg" alt="Profielfoto">
             </div>
         </div>
-
         <iframe
                 class="over-mij-kaart"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10023.937639933663!2d4.863241278133613!3d51.09029522504578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c14f92ac9d6d5f%3A0x36e8e2f2d1d323dc!2sZoerle-Parwijs%2C%202260%20Westerlo!5e0!3m2!1snl!2sbe!4v1768558125970!5m2!1snl!2sbe"
@@ -78,15 +127,45 @@
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
         </iframe>
-
     </div>
 </section>
 
-<section id="tijdlijn">
-    <h2>Mijn tijdlijn </h2>
-    <div class="tijdlijn-container"></div>
-</section>
+<!-- =====================================================
+     SECTION DIVIDER: over mij (navy) → tijdlijn (beige)
+     Flipped direction — navy flows back into beige
+====================================================== -->
+<div class="sectie-overgang">
+    <svg viewBox="0 0 1440 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="
+            M0,0 L1440,0
+            L1440,55
+            C1300,25 1160,70 1000,40
+            C840,10  700,65  540,38
+            C380,12  220,62  80,45
+            C40,38   20,42   0,48
+            Z
+        " fill="#181049"/>
+    </svg>
+</div>
 
+<section id="tijdlijn">
+    <h2>Mijn tijdlijn</h2>
+    <div class="timeline"></div>
+</section>
+<!-- =====================================================
+     SECTION DIVIDER: tijdlijn (beige) → projecten (navy)
+====================================================== -->
+<div class="sectie-overgang">
+    <svg viewBox="0 0 1440 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="
+            M0,45
+            C100,80 280,10 480,42
+            C680,74 820,8  1020,38
+            C1180,60 1340,20 1440,35
+            L1440,90 L0,90 Z
+        " fill="#181049"/>
+    </svg>
+</div>
 
 <section id="projecten">
     <h2>Projecten</h2>
@@ -108,9 +187,7 @@
                     </div>
                     <h3>Beer</h3>
                     <h4>Graphic skills 1</h4>
-                    <p>Dit is een afbeelding die we tijdens de les Photoshop hebben bewerkt en gemaakt. Ik vond dit een heel tof project om mee bezig te zijn, omdat ik het eindresultaat zeer mooi vind en de werkwijze mij ook goed lag.
-
-                    </p>
+                    <p>Dit is een afbeelding die we tijdens de les Photoshop hebben bewerkt en gemaakt. Ik vond dit een heel tof project om mee bezig te zijn, omdat ik het eindresultaat zeer mooi vind en de werkwijze mij ook goed lag.</p>
                 </div>
                 <div class="project">
                     <div class="project-afbeelding">
@@ -118,8 +195,7 @@
                     </div>
                     <h3>PE Scripting</h3>
                     <h4>Scripting</h4>
-                    <p>Dit is een screenshot van de website die we moesten maken voor het vak Scripting. Ik heb dit toegevoegd omdat het de eerste website is die ik zelf heb gemaakt.
-                        Het ziet er misschien nog niet erg goed of professioneel uit, maar ik ben er wel trots op, omdat het mijn eerste website is.</p>
+                    <p>Dit is een screenshot van de website die we moesten maken voor het vak Scripting. Ik heb dit toegevoegd omdat het de eerste website is die ik zelf heb gemaakt.</p>
                 </div>
                 <div class="project">
                     <div class="project-afbeelding">
@@ -127,8 +203,7 @@
                     </div>
                     <h3>Hoofdleider bij de Chiro</h3>
                     <h4>Vrije tijd</h4>
-                    <p> Als hoofdleider zorg ik ervoor dat alle evenementen en de algemene werking in goede banen verlopen.
-                        Deze rol brengt veel verantwoordelijkheid met zich mee. Door mijn engagement leer ik verschillende organisatorische en sociale vaardigheden. Deze ervaringen neem ik mee in mijn verdere persoonlijke en professionele ontwikkeling. </p>
+                    <p>Als hoofdleider zorg ik ervoor dat alle evenementen en de algemene werking in goede banen verlopen. Deze rol brengt veel verantwoordelijkheid met zich mee.</p>
                 </div>
             </div>
         </div>
@@ -136,25 +211,35 @@
     </div>
 </section>
 
-
-
+<!-- =====================================================
+     SECTION DIVIDER: projecten (navy) → contact (beige)
+====================================================== -->
+<div class="sectie-overgang">
+    <svg viewBox="0 0 1440 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="
+            M0,0 L1440,0
+            L1440,40
+            C1260,80 1080,12 880,45
+            C680,78  480,18  280,50
+            C160,68  80,55  0,60
+            Z
+        " fill="#181049"/>
+    </svg>
+</div>
 
 <section id="contact" class="contact">
     <h2>Contact</h2>
-    <p> Voor vragen kan je mij altijd contacteren. Dit zijn mijn gegevens:</p>
-        <p>
-            Persoonlijke e-mail: luca.nollet@gmail.com<br>
-            School e-mail: luca.nollet@student.pxl.be <br>
-        </p>
-        <p>
-            GSM: 0472 45 70 05
-        </p>
+    <p>Voor vragen kan je mij altijd contacteren. Dit zijn mijn gegevens:</p>
+    <p>
+        Persoonlijke e-mail: luca.nollet@gmail.com<br>
+        School e-mail: luca.nollet@student.pxl.be
+    </p>
+    <p>GSM: 0472 45 70 05</p>
 </section>
 
 <footer>
     © 2026 — Portfolio Luca Nollet <br>
     <a href="privacy.txt">Privacy richtlijnen</a>
-
 </footer>
 
 </body>

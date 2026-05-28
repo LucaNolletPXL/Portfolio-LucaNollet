@@ -21,61 +21,82 @@ nextBtn.addEventListener('click', () => {
     updateSlider();
 });
 
-
 const tijdlijnData = [
     {
         jaar: '2023',
-        tekst: 'In de opleiding leerkracht informatica Secundair Onderwijs, hadden we een project rond grafisch design. ' +
-            'Hier heb ik was basis geleerd en het boeide me direct. We moesten een eigen fictief festival ontwikkelen.  ' +
-            'Hier zie je een foto van het logo dat ik ontworpen heb.',
+        titel: 'Grafisch design project',
+        tekst: 'Eerste kennismaking met grafisch design via een fictief festival project.',
         afbeelding: 'Assets/logo-GrafischPakket.png'
-    }, {
+    },
+    {
         jaar: '2025',
-        tekst: 'Start digitale vormgeving aan PXL Hasselt. Eerste echte kennismaking met coderen en designen.',
+        titel: 'Start PXL',
+        tekst: 'Start Digitale Vormgeving en eerste ervaring met code.',
         afbeelding: null
     },
     {
         jaar: '2026',
-        tekst: 'Portfolio website gemaakt voor het vak werkplekleren 1. Eerste professionele webproject dat ik zelf gemaakt heb.',
+        titel: 'Portfolio website',
+        tekst: 'Mijn eerste professionele webproject gebouwd.',
         afbeelding: null
     }
 ];
 
 function generateTimeline(data) {
-    const container = document.querySelector('.tijdlijn-container');
+    const container = document.querySelector('.timeline');
+    if (!container) return;
+
     container.innerHTML = '';
 
     data.forEach(item => {
-        const tijdLijnItem = document.createElement('div');
-        tijdLijnItem.classList.add('tijdlijn-item');
+        const timelineItem = document.createElement('div');
+        timelineItem.className = 'timeline-item';
 
-        const punt = document.createElement('div');
-        punt.classList.add('tijdlijn-punt');
+        const content = document.createElement('div');
+        content.className = 'timeline-content';
 
-        const infoKaart = document.createElement('div');
-        infoKaart.classList.add('tijdlijn-infoKaart');
+        const date = document.createElement('span');
+        date.className = 'timeline-date';
+        date.textContent = item.jaar;
 
-        const tijdlijnH3 = document.createElement('h3');
-        tijdlijnH3.textContent = item.jaar;
+        const title = document.createElement('h3');
+        title.textContent = item.titel;
 
-        const tijdlijnP = document.createElement('p');
-        tijdlijnP.textContent = item.tekst;
+        const text = document.createElement('p');
+        text.textContent = item.tekst;
 
-        infoKaart.appendChild(tijdlijnH3);
-        infoKaart.appendChild(tijdlijnP);
-
+        content.append(date, title, text);
 
         if (item.afbeelding) {
             const img = document.createElement('img');
             img.src = item.afbeelding;
-            img.alt = item.jaar + ' project';
-            infoKaart.appendChild(img);
+            content.appendChild(img);
         }
 
-        tijdLijnItem.appendChild(punt);
-        tijdLijnItem.appendChild(infoKaart);
-        container.appendChild(tijdLijnItem);
+        timelineItem.appendChild(content);
+        container.appendChild(timelineItem);
     });
+
+    animateTimeline();
+}
+
+function animateTimeline() {
+    const items = document.querySelectorAll(".timeline-item");
+
+    function reveal() {
+        const trigger = window.innerHeight * 0.85;
+
+        items.forEach(item => {
+            const top = item.getBoundingClientRect().top;
+
+            if (top < trigger) {
+                item.classList.add("show");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", reveal);
+    reveal();
 }
 
 generateTimeline(tijdlijnData);
