@@ -1,4 +1,4 @@
-/* ===== PORTFOLIO.CSS – LUCA NOLLET ===== */
+/* ===== PORTFOLIO.CSS – IN INDEX STIJL ===== */
 :root {
     --bg-dark: #F9EBD8;
     --bg-light: #f0dfc4;
@@ -16,25 +16,18 @@
 }
 
 body {
-    position: relative;
     font-family: 'corbel', sans-serif;
-    background-color: #F9EBD8;
-    color: #181049;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
     line-height: 1.6;
 }
 
-
-body > * {
-    position: relative;
-    z-index: 1;
-}
-
 a {
-    color: inherit;
     text-decoration: none;
+    color: inherit;
 }
 
-/* ===== NAVIGATIE ===== */
+/* ===== NAVIGATIE (IDENTIEK) ===== */
 header {
     padding: 1rem 3rem;
     position: sticky;
@@ -53,23 +46,8 @@ nav {
     margin: 0 auto;
 }
 
-/* ===== LOGO PLACEHOLDER ===== */
-.logo a {
-    display: flex;
-    align-items: center;
-}
-
 .logo img {
     height: 48px;
-    width: auto;
-    display: block;
-}
-
-.logo a:not(:has(img)) {
-    font-family: 'comic-serif-pro', serif;
-    font-size: 1.6rem;
-    color: var(--accent);
-    letter-spacing: 2px;
 }
 
 .nav-links {
@@ -81,7 +59,6 @@ nav {
 .nav-links a {
     position: relative;
     color: #F9EBD8;
-    font-family: 'corbel', sans-serif;
     font-size: 0.95rem;
 }
 
@@ -93,166 +70,67 @@ nav {
     width: 0;
     height: 2px;
     background: var(--accent);
-    transition: width 0.2s ease;
+    transition: 0.2s;
 }
 
 .nav-links a:hover::after {
     width: 100%;
 }
 
-/* ===== PAGINA INHOUD ===== */
+/* ===== PAGINA STRUCTUUR ===== */
 main {
     max-width: 900px;
-    margin: 6rem auto;
-    padding: 0 3rem;
-    line-height: 1.7;
+    margin: 5rem auto;
+    padding: 0 2rem;
 }
 
-/* ===== LEERDOELEN / PORTFOLIO PAGINA ===== */
-.leerdoelen {
-    max-width: 900px;
-    margin: 6rem auto;
-    padding: 0 3rem;
-    line-height: 1.7;
-}
-
-.leerdoelen h1 {
+/* ===== TITELS ===== */
+h1 {
     font-family: 'comic-serif-pro', serif;
-    font-size: 3.2rem;
+    font-size: 2.5rem;
     text-transform: uppercase;
-    color: var(--navy);
-    margin-bottom: 1rem;
-}
-
-.leerdoelen > p {
-    color: var(--text-muted);
-    max-width: 750px;
-    margin-bottom: 4rem;
-    font-family: 'corbel', sans-serif;
-    font-size: 1.05rem;
-}
-
-.leerdoelen h2 {
-    font-family: 'comic-serif-pro', serif;
-    font-size: 2.2rem;
-    text-transform: uppercase;
-    color: var(--navy);
-    margin-bottom: 1rem;
-    margin-top: 4rem;
+    margin: 3rem 0 1rem;
+    color: var(--accent);
     position: relative;
 }
 
-.leerdoelen h2::after {
+h1::after {
     content: "";
-    display: block;
     width: 60px;
     height: 3px;
-    background-color: var(--accent);
+    background: var(--accent);
+    display: block;
     margin-top: 0.5rem;
 }
 
-.leerdoelen h3 {
-    font-family: 'comic-serif-pro', serif;
-    font-size: 1.4rem;
-    color: var(--navy);
-    margin-bottom: 0.5rem;
-    margin-top: 2rem;
+/* ===== LINK BLOKKEN ===== */
+a[href$=".pdf"],
+a[href$=".zip"] {
+    display: block;
+    background: var(--bg-light);
+    border: 2px solid rgba(24, 16, 73, 0.1);
+    padding: 1.2rem;
+    border-radius: 14px;
+    margin-bottom: 2rem;
+    transition: 0.2s;
+    font-weight: 600;
 }
 
-.leerdoelen p {
-    color: var(--text-muted);
-    font-size: 1.05rem;
-    max-width: 800px;
-    font-family: 'corbel', sans-serif;
-}
-
-.leerdoelen ul,
-.leerdoelen ol {
-    color: var(--text-muted);
-    font-size: 1.05rem;
-    font-family: 'corbel', sans-serif;
-    padding-left: 1.5rem;
-    margin-top: 0.5rem;
-}
-
-.leerdoelen li {
-    margin-bottom: 0.4rem;
-}
-
-/* ===== SAMENVATTING KAART ===== */
-.leerdoelen .samenvatting {
-    margin-top: 5rem;
-    padding: 2rem;
-    border-radius: 12px;
-    background: linear-gradient(180deg, var(--bg-light), var(--bg-dark));
-    border: 2px solid rgba(251, 209, 7, 0.5);
-}
-
-.leerdoelen .samenvatting h3 {
-    font-family: 'comic-serif-pro', serif;
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    color: var(--navy);
-    margin-top: 0;
-}
-
-.leerdoelen .samenvatting p {
-    color: var(--navy);
-}
-
-/* ===== REFLECTIE / ROL SECTIES ===== */
-.rol-sectie {
-    margin-top: 4rem;
-    padding: 2rem;
-    border-radius: 12px;
-    border-left: 5px solid var(--accent);
-    background: rgba(251, 209, 7, 0.06);
-}
-
-.rol-sectie h2 {
-    margin-top: 0;
-}
-
-.rol-sectie h2::after {
-    display: none;
-}
-
-/* ===== HIGHLIGHT TEKST ===== */
-.highlight {
-    color: var(--navy);
-    font-weight: 700;
-    background: rgba(251, 209, 7, 0.25);
-    padding: 0 4px;
-    border-radius: 3px;
-}
-
-/* ===== FOTO IN PORTFOLIO ===== */
-.portfolio-foto {
-    width: 100%;
-    border-radius: 12px;
-    margin: 2rem 0;
-    border: 3px solid var(--accent);
-    object-fit: cover;
+a[href$=".pdf"]:hover,
+a[href$=".zip"]:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+    background: #fff3c4;
 }
 
 /* ===== FOOTER ===== */
 footer {
-    padding: 2.5rem 3rem;
+    margin-top: 5rem;
+    padding: 2rem;
     text-align: center;
+    background: var(--navy);
     color: rgba(249, 235, 216, 0.6);
-    font-size: 0.9rem;
-    background-color: var(--navy);
     border-top: 3px solid var(--accent);
-    font-family: 'corbel', sans-serif;
-}
-
-footer a {
-    color: var(--blue);
-}
-
-footer a:hover {
-    color: var(--accent);
 }
 
 /* ===== RESPONSIVE ===== */
@@ -267,25 +145,17 @@ footer a:hover {
     }
 
     .nav-links {
-        gap: 1.2rem;
         flex-wrap: wrap;
         justify-content: center;
+        gap: 1rem;
     }
 
-    .leerdoelen {
+    main {
+        margin: 3rem auto;
         padding: 0 1.5rem;
-        margin: 4rem auto;
     }
 
-    .leerdoelen h1 {
-        font-size: 2.4rem;
-    }
-
-    .leerdoelen h2 {
-        font-size: 1.8rem;
-    }
-
-    .leerdoelen h3 {
-        font-size: 1.2rem;
+    h1 {
+        font-size: 2rem;
     }
 }
