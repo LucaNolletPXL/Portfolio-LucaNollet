@@ -10,15 +10,8 @@
 </head>
 <body>
 
-<!-- =====================================================
-     SVG BLOB DEFINITIONS
-     These are invisible — they define the clip-path shapes
-     used on the hero image, profile photo, and more.
-     The shapes match your mascot's organic rounded style.
-====================================================== -->
 <svg width="0" height="0" style="position:absolute;pointer-events:none;">
     <defs>
-        <!-- Hero image blob — big, slightly asymmetric like mascot -->
         <clipPath id="blob-clip" clipPathUnits="objectBoundingBox">
             <path d="
                 M 0.18 0.04
@@ -29,8 +22,6 @@
                 C -0.03 0.50, 0.02 0.20, 0.18 0.04 Z
             "/>
         </clipPath>
-
-        <!-- Profile photo blob — taller, matches the 'portrait' mascot poses -->
         <clipPath id="blob-profile-clip" clipPathUnits="objectBoundingBox">
             <path d="
                 M 0.20 0.05
@@ -53,7 +44,9 @@
         </div>
         <div class="nav-links">
             <a href="#over-mij">Over mij</a>
+            <a href="#skills">Skills</a>
             <a href="#projecten">Projecten</a>
+            <a href="#wpl2">WPL2</a>
             <a href="#contact">Contact</a>
             <a href="Portfolio.html" target="_blank">Mijn reflectie</a>
         </div>
@@ -66,8 +59,8 @@
         <p>
             Student Digitale Vormgeving aan PXL.
             Ik ontwerp en ontwikkel moderne digitale ervaringen.
-            Ik wil uitgroeien tot het creatieve kompas dat merken, bedrijven en organisaties begeleidt van visie tot uitvoering en hen krachtiger en menselijker
-            maakt in een visuele wereld met veel concurrenten.
+            Ik wil uitgroeien tot het creatieve kompas dat merken, bedrijven en organisaties begeleidt
+            van visie tot uitvoering en hen krachtiger en menselijker maakt in een visuele wereld met veel concurrenten.
         </p>
         <a href="#projecten" class="btn">Bekijk projecten</a>
     </div>
@@ -81,21 +74,10 @@
     </div>
 </section>
 
-<!-- =====================================================
-     SECTION DIVIDER: hero (beige) → over mij (navy)
-     Organic blob wave — like the curved edge in your logo
-     branding panel (image 2, right side).
-====================================================== -->
-<div class="sectie-overgang">
+<!-- DIVIDER: hero (beige) → over mij (navy) -->
+<div class="sectie-overgang" style="background-color: #F9EBD8;">
     <svg viewBox="0 0 1440 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-        <path d="
-            M0,30
-            C120,70 260,5  420,40
-            C580,75 680,10 860,35
-            C1040,60 1160,15 1300,45
-            C1360,60 1410,50 1440,42
-            L1440,90 L0,90 Z
-        " fill="#181049"/>
+        <path d="M0,30 C120,70 260,5 420,40 C580,75 680,10 860,35 C1040,60 1160,15 1300,45 C1360,60 1410,50 1440,42 L1440,90 L0,90 Z" fill="#181049"/>
     </svg>
 </div>
 
@@ -130,46 +112,73 @@
     </div>
 </section>
 
-<!-- =====================================================
-     SECTION DIVIDER: over mij (navy) → tijdlijn (beige)
-     Flipped direction — navy flows back into beige
-====================================================== -->
-<div class="sectie-overgang">
+<!-- DIVIDER: over mij (navy) → skills (beige) -->
+<div class="sectie-overgang" style="background-color: #181049;">
     <svg viewBox="0 0 1440 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-        <path d="
-            M0,0 L1440,0
-            L1440,55
-            C1300,25 1160,70 1000,40
-            C840,10  700,65  540,38
-            C380,12  220,62  80,45
-            C40,38   20,42   0,48
-            Z
-        " fill="#181049"/>
+        <path d="M0,0 L1440,0 L1440,55 C1300,25 1160,70 1000,40 C840,10 700,65 540,38 C380,12 220,62 80,45 C40,38 20,42 0,48 Z" fill="#181049"/>
     </svg>
 </div>
+
+<!-- =====================================================
+     SKILLS SECTIE
+     Vervang de placeholder tekst en skill items
+     met jouw eigen skills en niveaus.
+====================================================== -->
+<section id="skills" class="skills-sectie">
+    <h2>Mijn skills</h2>
+    <p class="skills-intro">
+        Tijdens het eerste jaar van mijn opleiding Digitale Vormgeving heb ik verschillende tools en technieken leren kennen.
+        Hier is een overzicht van mijn huidige vaardigheden.
+    </p>
+
+    <div class="skills-grid">
+
+        <div class="skill-kaart">
+            <h3>Design</h3>
+            <ul>
+                <li>Adobe Photoshop</li>
+                <li>Adobe Illustrator</li>
+                <li>Adobe Indesign</li>
+                <li>Figma</li>
+                <li>UX & UI ontwerpen</li>
+            </ul>
+        </div>
+
+
+        <div class="skill-kaart">
+            <h3>Development</h3>
+            <ul>
+                <li>HTML & CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+
+        <div class="skill-kaart">
+            <h3>Soft skills</h3>
+            <ul>
+                <li>Teamwork</li>
+                <li>Organisatie</li>
+                <li>Planning</li>
+                <li>Communicatie</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
 <section id="tijdlijn">
     <h2>Mijn tijdlijn</h2>
     <div class="timeline"></div>
 </section>
-<!-- =====================================================
-     SECTION DIVIDER: tijdlijn (beige) → projecten (navy)
-====================================================== -->
-<div class="sectie-overgang">
+
+<!-- DIVIDER: tijdlijn (beige) → projecten (navy) -->
+<div class="sectie-overgang" style="background-color: #F9EBD8;">
     <svg viewBox="0 0 1440 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-        <path d="
-            M0,45
-            C100,80 280,10 480,42
-            C680,74 820,8  1020,38
-            C1180,60 1340,20 1440,35
-            L1440,90 L0,90 Z
-        " fill="#181049"/>
+        <path d="M0,45 C100,80 280,10 480,42 C680,74 820,8 1020,38 C1180,60 1340,20 1440,35 L1440,90 L0,90 Z" fill="#181049"/>
     </svg>
 </div>
 
-
 <section id="projecten">
     <h2>Projecten</h2>
-
     <div class="projects-grid">
 
         <div class="project-card">
@@ -179,10 +188,7 @@
             <div class="project-content">
                 <h3>Chirofuif</h3>
                 <span class="tag">Vrije tijd</span>
-                <p>
-                    Ik ben hoofdleider bij de Chiro van Zoerle-Parwijs. Wij organiseren jaarlijks een fuif,
-                    en dit jaar ben ik verantwoordelijk voor de promotie op sociale media.
-                </p>
+                <p>Ik ben hoofdleider bij de Chiro van Zoerle-Parwijs. Wij organiseren jaarlijks een fuif, en dit jaar ben ik verantwoordelijk voor de promotie op sociale media.</p>
             </div>
         </div>
 
@@ -193,11 +199,7 @@
             <div class="project-content">
                 <h3>Beer</h3>
                 <span class="tag">Graphic skills 1</span>
-                <p>
-                    Dit is een afbeelding die we tijdens de les Photoshop hebben bewerkt en gemaakt.
-                    Ik vond dit een heel tof project om mee bezig te zijn, omdat ik het eindresultaat
-                    zeer mooi vind en de werkwijze mij ook goed lag.
-                </p>
+                <p>Dit is een afbeelding die we tijdens de les Photoshop hebben bewerkt en gemaakt. Ik vond dit een heel tof project om mee bezig te zijn, omdat ik het eindresultaat zeer mooi vind en de werkwijze mij ook goed lag.</p>
             </div>
         </div>
 
@@ -208,10 +210,7 @@
             <div class="project-content">
                 <h3>PE Scripting</h3>
                 <span class="tag">Scripting</span>
-                <p>
-                    Dit is een screenshot van de website die we moesten maken voor het vak Scripting.
-                    Ik heb dit toegevoegd omdat het de eerste website is die ik zelf heb gemaakt.
-                </p>
+                <p>Dit is een screenshot van de website die we moesten maken voor het vak Scripting. Ik heb dit toegevoegd omdat het de eerste website is die ik zelf heb gemaakt.</p>
             </div>
         </div>
 
@@ -222,32 +221,83 @@
             <div class="project-content">
                 <h3>Hoofdleider bij de Chiro</h3>
                 <span class="tag">Vrije tijd</span>
-                <p>
-                    Als hoofdleider zorg ik ervoor dat alle evenementen en de algemene werking
-                    in goede banen verlopen. Deze rol brengt veel verantwoordelijkheid met zich mee.
-                </p>
+                <p>Als hoofdleider zorg ik ervoor dat alle evenementen en de algemene werking in goede banen verlopen. Deze rol brengt veel verantwoordelijkheid met zich mee.</p>
             </div>
         </div>
 
     </div>
 </section>
-``
 
-<!-- =====================================================
-     SECTION DIVIDER: projecten (navy) → contact (beige)
-====================================================== -->
-<div class="sectie-overgang">
+<!-- DIVIDER: projecten (navy) → wpl2 (beige) -->
+<div class="sectie-overgang" style="background-color: #181049;">
     <svg viewBox="0 0 1440 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-        <path d="
-            M0,0 L1440,0
-            L1440,40
-            C1260,80 1080,12 880,45
-            C680,78  480,18  280,50
-            C160,68  80,55  0,60
-            Z
-        " fill="#181049"/>
+        <path d="M0,0 L1440,0 L1440,40 C1260,80 1080,12 880,45 C680,78 480,18 280,50 C160,68 80,55 0,60 Z" fill="#181049"/>
     </svg>
 </div>
+
+<!-- =====================================================
+     WPL2 CASE SECTIE
+     Vervang alle placeholder tekst met jouw eigen
+     WPL2 verhaal, afbeeldingen en bevindingen.
+====================================================== -->
+<section id="wpl2" class="wpl2-sectie">
+    <div class="wpl2-inhoud">
+
+        <div class="wpl2-tekst">
+            <span class="wpl2-label">Werkplekleren 2</span>
+            <h2>WPL2 Case</h2>
+            <p>
+                <!-- PLACEHOLDER: beschrijf hier jouw WPL2 opdracht en context -->
+                Tijdens mijn werkplekleren stage heb ik gewerkt aan...
+                Beschrijf hier de opdrachtgever, de context en wat de opdracht inhield.
+            </p>
+            <p>
+                <!-- PLACEHOLDER: beschrijf wat je hebt gedaan en geleerd -->
+                Wat heb ik gedaan? Welke tools heb ik gebruikt? Wat heb ik geleerd?
+            </p>
+            <div class="wpl2-tags">
+                <!-- Voeg tags toe voor de tools/skills die je gebruikte -->
+                <span class="tag"><!-- Tool/skill --></span>
+                <span class="tag"><!-- Tool/skill --></span>
+                <span class="tag"><!-- Tool/skill --></span>
+            </div>
+        </div>
+
+        <div class="wpl2-media">
+            <!-- PLACEHOLDER: vervang door een echte afbeelding van jouw WPL2 werk -->
+            <div class="wpl2-afbeelding-placeholder">
+                <span>📁</span>
+                <p>Voeg hier een afbeelding toe van je WPL2 werk</p>
+                <!-- Verwijder de div hierboven en gebruik dit zodra je een afbeelding hebt: -->
+                <!-- <img src="Assets/WPL2.jpg" alt="WPL2 case"> -->
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Optioneel: extra detail blokken -->
+    <div class="wpl2-detail-grid">
+        <div class="wpl2-detail-kaart">
+            <h4>🏢 Opdrachtgever</h4>
+            <p><!-- Naam van het bedrijf of de organisatie --></p>
+        </div>
+        <div class="wpl2-detail-kaart">
+            <h4>📅 Periode</h4>
+            <p><!-- Startdatum – Einddatum --></p>
+        </div>
+        <div class="wpl2-detail-kaart">
+            <h4>🎯 Opdracht</h4>
+            <p><!-- Korte omschrijving van de opdracht --></p>
+        </div>
+        <div class="wpl2-detail-kaart">
+            <h4>💡 Resultaat</h4>
+            <p><!-- Wat was het eindresultaat? --></p>
+        </div>
+    </div>
+
+</section>
+
+<!-- DIVIDER: wpl2 (beige) → contact (beige) — zelfde kleur, geen divider nodig -->
 
 <section id="contact" class="contact">
     <h2>Contact</h2>

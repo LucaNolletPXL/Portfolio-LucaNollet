@@ -17,6 +17,12 @@ const tijdlijnData = [
         titel: 'Portfolio website',
         tekst: 'Mijn eerste professionele webproject gebouwd.',
         afbeelding: null
+    },
+    {
+        jaar: '2026',
+        titel: 'Eigen brand',
+        tekst: 'Tijdens het vak Digital Branding heb ik de basis gelegd voor mijn eigen merk: Luca Nollet. Bij de projecten vind je het bijhorende brandbook, neem hier dus zeker een kijkje.',
+        afbeelding: 'Assets/LogoIcon.png'
     }
 ];
 
