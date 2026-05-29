@@ -1,4 +1,5 @@
-/* ===== PORTFOLIO.CSS – IN INDEX STIJL ===== */
+/* ===== PORTFOLIO.CSS – LUCA NOLLET ===== */
+
 :root {
     --bg-dark: #F9EBD8;
     --bg-light: #f0dfc4;
@@ -20,6 +21,9 @@ body {
     background-color: var(--bg-dark);
     color: var(--text-main);
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 a {
@@ -27,7 +31,9 @@ a {
     color: inherit;
 }
 
-/* ===== NAVIGATIE (IDENTIEK) ===== */
+
+/* ===== NAVIGATIE ===== */
+
 header {
     padding: 1rem 3rem;
     position: sticky;
@@ -46,9 +52,7 @@ nav {
     margin: 0 auto;
 }
 
-.logo img {
-    height: 48px;
-}
+.logo img { height: 48px; }
 
 .nav-links {
     display: flex;
@@ -73,37 +77,38 @@ nav {
     transition: 0.2s;
 }
 
-.nav-links a:hover::after {
-    width: 100%;
-}
+.nav-links a:hover::after { width: 100%; }
 
-/* ===== PAGINA STRUCTUUR ===== */
+
+/* ===== INHOUD ===== */
+
 main {
+    flex: 1;
     max-width: 900px;
+    width: 100%;
     margin: 5rem auto;
     padding: 0 2rem;
 }
 
-/* ===== TITELS ===== */
 h1 {
     font-family: 'comic-serif-pro', serif;
     font-size: 2.5rem;
     text-transform: uppercase;
     margin: 3rem 0 1rem;
-    color: var(--accent);
+    color: var(--navy);
     position: relative;
 }
 
 h1::after {
     content: "";
+    display: block;
     width: 60px;
     height: 3px;
     background: var(--accent);
-    display: block;
     margin-top: 0.5rem;
 }
 
-/* ===== LINK BLOKKEN ===== */
+/* Stijl voor PDF- en ZIP-links */
 a[href$=".pdf"],
 a[href$=".zip"] {
     display: block;
@@ -112,8 +117,8 @@ a[href$=".zip"] {
     padding: 1.2rem;
     border-radius: 14px;
     margin-bottom: 2rem;
-    transition: 0.2s;
     font-weight: 600;
+    transition: 0.2s;
 }
 
 a[href$=".pdf"]:hover,
@@ -123,9 +128,10 @@ a[href$=".zip"]:hover {
     background: #fff3c4;
 }
 
+
 /* ===== FOOTER ===== */
+
 footer {
-    margin-top: 5rem;
     padding: 2rem;
     text-align: center;
     background: var(--navy);
@@ -133,11 +139,11 @@ footer {
     border-top: 3px solid var(--accent);
 }
 
+
 /* ===== RESPONSIVE ===== */
+
 @media (max-width: 768px) {
-    header {
-        padding: 1rem 1.5rem;
-    }
+    header { padding: 1rem 1.5rem; }
 
     nav {
         flex-direction: column;
@@ -155,7 +161,5 @@ footer {
         padding: 0 1.5rem;
     }
 
-    h1 {
-        font-size: 2rem;
-    }
+    h1 { font-size: 2rem; }
 }

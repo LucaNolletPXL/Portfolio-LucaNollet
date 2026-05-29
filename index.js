@@ -1,3 +1,5 @@
+/* ===== TIJDLIJN DATA ===== */
+/* Voeg hier je eigen items toe of pas bestaande aan */
 
 const tijdlijnData = [
     {
@@ -21,10 +23,13 @@ const tijdlijnData = [
     {
         jaar: '2026',
         titel: 'Eigen brand',
-        tekst: 'Tijdens het vak Digital Branding heb ik de basis gelegd voor mijn eigen merk: Luca Nollet. Bij de projecten vind je het bijhorende brandbook, neem hier dus zeker een kijkje.',
+        tekst: 'Tijdens Digital Branding de basis gelegd voor mijn eigen merk: Luca Nollet. Bij de projecten vind je het bijhorende brandbook.',
         afbeelding: 'Assets/LogoIcon.png'
     }
 ];
+
+
+/* ===== TIJDLIJN GENEREREN ===== */
 
 function generateTimeline(data) {
     const container = document.querySelector('.timeline');
@@ -64,23 +69,25 @@ function generateTimeline(data) {
     animateTimeline();
 }
 
+
+/* ===== SCROLL ANIMATIE ===== */
+
 function animateTimeline() {
-    const items = document.querySelectorAll(".timeline-item");
+    const items = document.querySelectorAll('.timeline-item');
 
     function reveal() {
         const trigger = window.innerHeight * 0.85;
-
         items.forEach(item => {
-            const top = item.getBoundingClientRect().top;
-
-            if (top < trigger) {
-                item.classList.add("show");
+            if (item.getBoundingClientRect().top < trigger) {
+                item.classList.add('show');
             }
         });
     }
 
-    window.addEventListener("scroll", reveal);
+    window.addEventListener('scroll', reveal);
     reveal();
 }
 
+
+/* Start */
 generateTimeline(tijdlijnData);

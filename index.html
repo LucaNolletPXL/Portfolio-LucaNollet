@@ -10,31 +10,19 @@
 </head>
 <body>
 
+<!-- Blob-vormen voor de profielfoto en hero foto -->
 <svg width="0" height="0" style="position:absolute;pointer-events:none;">
     <defs>
         <clipPath id="blob-clip" clipPathUnits="objectBoundingBox">
-            <path d="
-                M 0.18 0.04
-                C 0.38 -0.04, 0.65 -0.02, 0.84 0.10
-                C 1.02 0.22, 1.04 0.46, 0.96 0.65
-                C 0.88 0.84, 0.70 1.04, 0.50 1.01
-                C 0.30 0.98, 0.10 0.86, 0.04 0.68
-                C -0.03 0.50, 0.02 0.20, 0.18 0.04 Z
-            "/>
+            <path d="M 0.18 0.04 C 0.38 -0.04, 0.65 -0.02, 0.84 0.10 C 1.02 0.22, 1.04 0.46, 0.96 0.65 C 0.88 0.84, 0.70 1.04, 0.50 1.01 C 0.30 0.98, 0.10 0.86, 0.04 0.68 C -0.03 0.50, 0.02 0.20, 0.18 0.04 Z"/>
         </clipPath>
         <clipPath id="blob-profile-clip" clipPathUnits="objectBoundingBox">
-            <path d="
-                M 0.20 0.05
-                C 0.40 -0.03, 0.68 0.00, 0.82 0.12
-                C 0.98 0.26, 1.02 0.50, 0.94 0.70
-                C 0.86 0.90, 0.66 1.04, 0.46 1.00
-                C 0.26 0.96, 0.08 0.82, 0.04 0.62
-                C -0.02 0.42, 0.04 0.14, 0.20 0.05 Z
-            "/>
+            <path d="M 0.20 0.05 C 0.40 -0.03, 0.68 0.00, 0.82 0.12 C 0.98 0.26, 1.02 0.50, 0.94 0.70 C 0.86 0.90, 0.66 1.04, 0.46 1.00 C 0.26 0.96, 0.08 0.82, 0.04 0.62 C -0.02 0.42, 0.04 0.14, 0.20 0.05 Z"/>
         </clipPath>
     </defs>
 </svg>
 
+<!-- Navigatie -->
 <header>
     <nav>
         <div class="logo">
@@ -53,6 +41,7 @@
     </nav>
 </header>
 
+<!-- Hero sectie -->
 <section class="titel">
     <div>
         <h1>Luca<br>Nollet</h1>
@@ -60,7 +49,7 @@
             Student Digitale Vormgeving aan PXL.
             Ik ontwerp en ontwikkel moderne digitale ervaringen.
             Ik wil uitgroeien tot het creatieve kompas dat merken, bedrijven en organisaties begeleidt
-            van visie tot uitvoering en hen krachtiger en menselijker maakt in een visuele wereld met veel concurrenten.
+            van visie tot uitvoering en hen krachtiger en menselijker maakt in een visuele wereld.
         </p>
         <a href="#projecten" class="btn">Bekijk projecten</a>
     </div>
@@ -71,16 +60,18 @@
                 <img src="Assets/HeaderFoto.jpg" alt="foto van mij">
             </div>
         </div>
+        <img src="Assets/MascotHoed.png" alt="" class="mascotte-blob mascotte-hero" aria-hidden="true">
     </div>
 </section>
 
-<!-- DIVIDER: hero (beige) → over mij (navy) -->
+<!-- Golf: beige → navy -->
 <div class="sectie-overgang" style="background-color: #F9EBD8;">
     <svg viewBox="0 0 1440 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
         <path d="M0,30 C120,70 260,5 420,40 C580,75 680,10 860,35 C1040,60 1160,15 1300,45 C1360,60 1410,50 1440,42 L1440,90 L0,90 Z" fill="#181049"/>
     </svg>
 </div>
 
+<!-- Over mij -->
 <section id="over-mij" class="over-mij">
     <div class="over-mij-inhoud">
         <div class="over-mij-tekst">
@@ -89,9 +80,9 @@
                 Hallo, mijn naam is Luca Nollet en ik ben 21 jaar oud.<br>
                 Ik woon in Zoerle-Parwijs, een deelgemeente van Westerlo.<br>
                 Dit is mijn eerste jaar van de opleiding Digitale Vormgeving aan Hogeschool PXL in Hasselt.<br>
-                Ik had geen voorkennis, maar wel veel interesse in design en vormgeving. Daarom heb ik ervoor gekozen om deze opleiding te volgen.<br>
+                Ik had geen voorkennis, maar wel veel interesse in design en vormgeving.<br>
                 Het verdere verloop van mijn 'carrière' vind je in <a href="#tijdlijn"><strong>mijn tijdlijn.</strong></a><br>
-                In mijn vrije tijd ben ik hoofdleider bij de Chiro van Zoerle-Parwijs. Hierbij heb ik veel vaardigheden ontwikkeld, zoals zelfstandigheid.
+                In mijn vrije tijd ben ik hoofdleider bij de Chiro van Zoerle-Parwijs.
             </p>
         </div>
         <div class="over-mij-afbeelding-div">
@@ -102,37 +93,29 @@
         <iframe
                 class="over-mij-kaart"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10023.937639933663!2d4.863241278133613!3d51.09029522504578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c14f92ac9d6d5f%3A0x36e8e2f2d1d323dc!2sZoerle-Parwijs%2C%202260%20Westerlo!5e0!3m2!1snl!2sbe!4v1768558125970!5m2!1snl!2sbe"
-                width="600"
-                height="450"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
         </iframe>
     </div>
 </section>
 
-<!-- DIVIDER: over mij (navy) → skills (beige) -->
+<!-- Golf: navy → beige -->
 <div class="sectie-overgang" style="background-color: #181049;">
     <svg viewBox="0 0 1440 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
         <path d="M0,0 L1440,0 L1440,55 C1300,25 1160,70 1000,40 C840,10 700,65 540,38 C380,12 220,62 80,45 C40,38 20,42 0,48 Z" fill="#181049"/>
     </svg>
 </div>
 
-<!-- =====================================================
-     SKILLS SECTIE
-     Vervang de placeholder tekst en skill items
-     met jouw eigen skills en niveaus.
-====================================================== -->
+<!-- Skills -->
 <section id="skills" class="skills-sectie">
+    <img src="Assets/MascotGebogen.png" alt="" class="mascotte-blob mascotte-skills" aria-hidden="true">
+
     <h2>Mijn skills</h2>
     <p class="skills-intro">
-        Tijdens het eerste jaar van mijn opleiding Digitale Vormgeving heb ik verschillende tools en technieken leren kennen.
+        Tijdens het eerste jaar van mijn opleiding heb ik verschillende tools en technieken leren kennen.
         Hier is een overzicht van mijn huidige vaardigheden.
     </p>
-
     <div class="skills-grid">
-
         <div class="skill-kaart">
             <h3>Design</h3>
             <ul>
@@ -143,8 +126,6 @@
                 <li>UX & UI ontwerpen</li>
             </ul>
         </div>
-
-
         <div class="skill-kaart">
             <h3>Development</h3>
             <ul>
@@ -152,7 +133,6 @@
                 <li>JavaScript</li>
             </ul>
         </div>
-
         <div class="skill-kaart">
             <h3>Soft skills</h3>
             <ul>
@@ -165,123 +145,108 @@
     </div>
 </section>
 
+<!-- Tijdlijn -->
 <section id="tijdlijn">
+    <img src="Assets/MascotRechtop.png" alt="" class="mascotte-blob mascotte-tijdlijn" aria-hidden="true">
     <h2>Mijn tijdlijn</h2>
     <div class="timeline"></div>
 </section>
 
-<!-- DIVIDER: tijdlijn (beige) → projecten (navy) -->
+<!-- Golf: beige → navy -->
 <div class="sectie-overgang" style="background-color: #F9EBD8;">
     <svg viewBox="0 0 1440 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
         <path d="M0,45 C100,80 280,10 480,42 C680,74 820,8 1020,38 C1180,60 1340,20 1440,35 L1440,90 L0,90 Z" fill="#181049"/>
     </svg>
 </div>
 
+<!-- Projecten -->
 <section id="projecten">
     <h2>Projecten</h2>
     <div class="projects-grid">
 
         <div class="project-card">
             <div class="project-image">
-                <img src="./Assets/pfp.jpg" alt="Project 1 Chirofuif">
+                <img src="./Assets/pfp.jpg" alt="Chirofuif">
             </div>
             <div class="project-content">
                 <h3>Chirofuif</h3>
                 <span class="tag">Vrije tijd</span>
-                <p>Ik ben hoofdleider bij de Chiro van Zoerle-Parwijs. Wij organiseren jaarlijks een fuif, en dit jaar ben ik verantwoordelijk voor de promotie op sociale media.</p>
+                <p>Ik ben hoofdleider bij de Chiro van Zoerle-Parwijs. Dit jaar ben ik verantwoordelijk voor de promotie op sociale media.</p>
             </div>
         </div>
 
         <div class="project-card">
             <div class="project-image">
-                <img src="./Assets/Beer.png" alt="Project 2 Beer">
+                <img src="./Assets/Beer.png" alt="Beer">
             </div>
             <div class="project-content">
                 <h3>Beer</h3>
                 <span class="tag">Graphic skills 1</span>
-                <p>Dit is een afbeelding die we tijdens de les Photoshop hebben bewerkt en gemaakt. Ik vond dit een heel tof project om mee bezig te zijn, omdat ik het eindresultaat zeer mooi vind en de werkwijze mij ook goed lag.</p>
+                <p>Een afbeelding bewerkt en gemaakt tijdens de les Photoshop. Ik vond dit een heel tof project — het eindresultaat vind ik zeer mooi.</p>
             </div>
         </div>
 
         <div class="project-card">
             <div class="project-image">
-                <img src="./Assets/PEScritpting.png" alt="Project 3 PE scripting">
+                <img src="./Assets/PEScritpting.png" alt="PE Scripting">
             </div>
             <div class="project-content">
                 <h3>PE Scripting</h3>
                 <span class="tag">Scripting</span>
-                <p>Dit is een screenshot van de website die we moesten maken voor het vak Scripting. Ik heb dit toegevoegd omdat het de eerste website is die ik zelf heb gemaakt.</p>
+                <p>De eerste website die ik zelf heb gemaakt, voor het vak Scripting. Het ziet er misschien nog eenvoudig uit, maar ik ben er trots op.</p>
             </div>
         </div>
 
         <div class="project-card">
             <div class="project-image">
-                <img src="Assets/Chiro%20logo.jpg" alt="Logo van Chiro De Keten">
+                <img src="Assets/Chiro%20logo.jpg" alt="Chiro logo">
             </div>
             <div class="project-content">
                 <h3>Hoofdleider bij de Chiro</h3>
                 <span class="tag">Vrije tijd</span>
-                <p>Als hoofdleider zorg ik ervoor dat alle evenementen en de algemene werking in goede banen verlopen. Deze rol brengt veel verantwoordelijkheid met zich mee.</p>
+                <p>Als hoofdleider zorg ik ervoor dat alle evenementen en de algemene werking in goede banen verlopen.</p>
             </div>
         </div>
+
         <div class="project-card">
             <div class="project-image">
-                <img src="Assets/Chiro%20logo.jpg" alt="Logo van Chiro De Keten">
+                <img src="Assets/Chiro%20logo.jpg" alt="Brandbook">
             </div>
             <div class="project-content">
                 <h3>Brandbook WIP</h3>
                 <span class="tag">Vrije tijd</span>
-                <p>Als hoofdleider zorg ik ervoor dat alle evenementen en de algemene werking in goede banen verlopen. Deze rol brengt veel verantwoordelijkheid met zich mee.</p>
+                <p>Als hoofdleider zorg ik ervoor dat alle evenementen en de algemene werking in goede banen verlopen.</p>
             </div>
         </div>
+
     </div>
 </section>
 
-<!-- DIVIDER: projecten (navy) → wpl2 (beige) -->
+<!-- Golf: navy → beige -->
 <div class="sectie-overgang" style="background-color: #181049;">
     <svg viewBox="0 0 1440 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
         <path d="M0,0 L1440,0 L1440,40 C1260,80 1080,12 880,45 C680,78 480,18 280,50 C160,68 80,55 0,60 Z" fill="#181049"/>
     </svg>
 </div>
 
-<!-- =====================================================
-     WPL2 CASE SECTIE
-====================================================== -->
+<!-- WPL2 Case -->
 <section id="wpl2" class="wpl2-sectie">
     <div class="wpl2-inhoud">
-
         <div class="wpl2-tekst">
             <span class="wpl2-label">Werkplekleren 2</span>
             <h2>WPL2 Case</h2>
+
             <p><strong>Projectomschrijving</strong></p>
-            <p>
-                De opdrachtgever voor dit project was Karting Genk. De opdracht bestond erin een vernieuwend concept uit te werken waarmee meer studenten aangesproken en aangetrokken konden worden naar de karting. Het doel was om een evenement te creëren dat niet alleen focust op racen, maar ook op de volledige beleving errond. Hierbij moest rekening gehouden worden met de interesses en leefwereld van studenten, zodat het concept aantrekkelijk en toegankelijk zou aanvoelen voor zowel hogescholen als universiteiten.
-            </p>
-            <p>
-                Vanuit deze uitdaging ontwikkelden we het concept Campus Karting, een competitie waarbij verschillende hogescholen en universiteiten het tijdens drie evenementen in het schooljaar tegen elkaar opnemen op het circuit. Studenten krijgen de kans om hun school te vertegenwoordigen en te strijden voor de titel van beste racers. Naast het competitieve aspect wilden we vooral inzetten op sfeer en community building tussen de verschillende studentenverenigingen en onderwijsinstellingen.
-            </p>
-            <p>
-                Campus Karting werd uitgewerkt als een totaalervaring. Naast de races voorzagen we een uitgebreide fanzone met entertainment, ontmoetingsplaatsen en catering, zodat ook supporters en bezoekers een volledige eventbeleving kregen. Hierdoor werd het evenement meer dan enkel een sportcompetitie, maar eerder een sociale activiteit waar studenten samenkomen.
-            </p>
-            <p>
-                Binnen dit project stonden wij in voor de volledige branding van Campus Karting. We ontwikkelden onder andere de naam, visuele identiteit, logo’s, kleurgebruik, communicatiestijl en verschillende promotiematerialen. Op deze manier zorgden we voor een sterke en herkenbare uitstraling die aansloot bij de doelgroep van studenten.
-            </p>
+            <p>De opdrachtgever was Karting Genk. De opdracht: een vernieuwend concept uitwerken om meer studenten naar de karting te trekken, gericht op de volledige beleving — niet alleen het racen.</p>
+            <p>Vanuit die uitdaging ontwikkelden we <em>Campus Karting</em>: een competitie waarbij hogescholen en universiteiten het drie keer per jaar tegen elkaar opnemen op het circuit.</p>
+            <p>We werkten het uit als een totaalervaring met een fanzone, catering en entertainment, zodat ook bezoekers en supporters een volledige eventbeleving kregen.</p>
+            <p>Ons team stond in voor de volledige branding: naam, visuele identiteit, logo's, kleurgebruik, communicatiestijl en promotiematerialen.</p>
+
             <p><strong>Mijn aandeel</strong></p>
-            <p>
-                Dit project was een groepswerk waarbij iedereen een eigen bijdrage leverde aan de ontwikkeling van het concept. Mijn grootste bijdrage lag voornamelijk bij het creatieve en digitale aspect van het project. Ik dacht actief mee na over de visuele stijl die we wilden uitstralen en hoe we Campus Karting aantrekkelijk konden maken voor studenten. Samen met het team zochten we naar een moderne, energieke en competitieve uitstraling die aansloot bij de doelgroep en tegelijk professioneel genoeg bleef voor de opdrachtgever.
-            </p>
+            <p>Mijn bijdrage lag bij het creatieve en digitale aspect. Ik dacht mee over de visuele stijl en hoe we Campus Karting aantrekkelijk konden maken voor studenten — energiek en competitief, maar ook professioneel.</p>
+            <p>Daarnaast werkte ik mee aan de UI en UX voor de website en applicatie: gebruiksvriendelijkheid, structuur en navigatie stonden centraal, zodat studenten snel races, scores en evenementen konden terugvinden.</p>
+            <p>Uit dit project leerde ik hoe belangrijk het is om branding en gebruikservaring samen te laten werken, en hoe je ontwerpt voor een specifieke doelgroep.</p>
 
-            <p>
-                Daarnaast werkte ik mee aan de verdere conceptuitwerking van het evenement. We dachten na over hoe de competitie georganiseerd kon worden, welke sfeer we wilden creëren en hoe we van Campus Karting meer konden maken dan enkel een race-evenement. Het idee van een totaalbeleving met een fanzone, catering en een sterke community tussen verschillende scholen werd hierdoor verder versterkt.
-            </p>
-
-            <p>
-                Ik hielp ook mee bij het uitwerken van de UI en UX voor de website en applicatie. Hierbij werd gefocust op gebruiksvriendelijkheid, structuur en een duidelijke navigatie zodat studenten snel informatie konden terugvinden over races, scores en evenementen. Daarnaast dacht ik mee na over hoe het digitale ontwerp visueel kon aansluiten bij de branding van Campus Karting. Door aandacht te besteden aan kleurgebruik, typografie en consistente componenten ontstond een moderne en samenhangende digitale ervaring.
-            </p>
-
-            <p>
-                Uit dit project heb ik veel geleerd over samenwerken binnen een creatief proces en over het belang van een sterke combinatie tussen branding en gebruikservaring. Ik merkte hoe belangrijk het is om niet enkel naar het visuele aspect te kijken, maar ook naar hoe gebruikers een platform ervaren en gebruiken. Daarnaast heb ik mijn vaardigheden binnen UI en UX verder kunnen ontwikkelen en meer inzicht gekregen in het ontwerpen van digitale producten voor een specifieke doelgroep.
-            </p>
             <div class="wpl2-tags">
                 <span class="tag">Adobe Illustrator</span>
                 <span class="tag">Adobe Photoshop</span>
@@ -290,25 +255,22 @@
         </div>
 
         <div class="wpl2-media">
-                <img src="Assets/logo%20CampusKarting.png" alt="Logo Campus Karting">
-                <img src="Assets/MockupCampus.png" alt="Mockup Campus Karting">
-                <a href="Assets/PDF/Brandbook-WPL2%20.pdf" target="_blank">
-                    <img
-                            src="Assets/BrandbookPreview.png"
-                            alt="Brandbook Campus Karting"
-                            width="300">
-                </a>
+            <img src="Assets/logo%20CampusKarting.png" alt="Logo Campus Karting">
+            <img src="Assets/MockupCampus.png" alt="Mockup Campus Karting">
+            <a href="Assets/PDF/Brandbook-WPL2%20.pdf" target="_blank">
+                <img src="Assets/BrandbookPreview.png" alt="Brandbook Campus Karting">
+            </a>
+            <img src="Assets/MascotLaag.png" alt="" class="mascotte-blob mascotte-wpl2" aria-hidden="true">
         </div>
-
     </div>
-
 </section>
 
-<!-- DIVIDER: wpl2 (beige) → contact (beige) — zelfde kleur, geen divider nodig -->
-
+<!-- Contact -->
 <section id="contact" class="contact">
+    <!-- Mascotte: verander src naar jouw mascotte PNG -->
+    <img src="Assets/LogoIcon.png" alt="" class="mascotte-blob mascotte-contact" aria-hidden="true">
     <h2>Contact</h2>
-    <p>Voor vragen kan je mij altijd contacteren. Dit zijn mijn gegevens:</p>
+    <p>Voor vragen kan je mij altijd contacteren:</p>
     <p>
         Persoonlijke e-mail: luca.nollet@gmail.com<br>
         School e-mail: luca.nollet@student.pxl.be
@@ -317,7 +279,7 @@
 </section>
 
 <footer>
-    © 2026 — Portfolio Luca Nollet <br>
+    © 2026 — Portfolio Luca Nollet<br>
     <a href="privacy.txt">Privacy richtlijnen</a>
 </footer>
 
