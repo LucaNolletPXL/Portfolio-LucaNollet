@@ -15,14 +15,7 @@ Dit project is bedoeld als leerproces  website.
 ## Gebruik van externe bronnen
 Voor dit project heb ik gebruik gemaakt van externe bronnen voor inspiratie en ondersteuning.
 
-### CSS achtergrond
-Voor het vinden van een geschikte CSS-achtergrond heb ik gebruik gemaakt van de volgende website:
 
-- https://www.magicpattern.design/tools/css-backgrounds
-
-Deze site werd gebruikt om een achtergrondstijl te vinden die daarna werd aangepast aan mijn eigen ontwerp.
-
----
 
 ## Gebruik van AI
 Bij het maken van deze website heb ik gebruik gemaakt van AI als ondersteuning.

@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<!-- Blob-vormen voor de profielfoto en hero foto -->
+<!-- Onzichtbare SVG-vormen gebruikt als clip-path op foto's -->
 <svg width="0" height="0" style="position:absolute;pointer-events:none;">
     <defs>
         <clipPath id="blob-clip" clipPathUnits="objectBoundingBox">
@@ -22,7 +22,6 @@
     </defs>
 </svg>
 
-<!-- Navigatie -->
 <header>
     <nav>
         <div class="logo">
@@ -41,7 +40,6 @@
     </nav>
 </header>
 
-<!-- Hero sectie -->
 <section class="titel">
     <div>
         <h1>Luca<br>Nollet</h1>
@@ -71,7 +69,6 @@
     </svg>
 </div>
 
-<!-- Over mij -->
 <section id="over-mij" class="over-mij">
     <div class="over-mij-inhoud">
         <div class="over-mij-tekst">
@@ -106,10 +103,8 @@
     </svg>
 </div>
 
-<!-- Skills -->
 <section id="skills" class="skills-sectie">
     <img src="Assets/MascotGebogen.png" alt="" class="mascotte-blob mascotte-skills" aria-hidden="true">
-
     <h2>Mijn skills</h2>
     <p class="skills-intro">
         Tijdens het eerste jaar van mijn opleiding heb ik verschillende tools en technieken leren kennen.
@@ -145,10 +140,10 @@
     </div>
 </section>
 
-<!-- Tijdlijn -->
 <section id="tijdlijn">
     <img src="Assets/MascotRechtop.png" alt="" class="mascotte-blob mascotte-tijdlijn" aria-hidden="true">
     <h2>Mijn tijdlijn</h2>
+    <!-- Items worden ingeladen via index.js -->
     <div class="timeline"></div>
 </section>
 
@@ -159,7 +154,6 @@
     </svg>
 </div>
 
-<!-- Projecten -->
 <section id="projecten">
     <h2>Projecten</h2>
     <div class="projects-grid">
@@ -208,15 +202,17 @@
             </div>
         </div>
 
+        <!-- Klikbare afbeelding die een PDF opent -->
         <div class="project-card">
             <div class="project-image">
                 <a href="Assets/PDF/Brandbook_LucaNollet.pdf" target="_blank">
                     <img src="Assets/EigenBrandbookPreview.png" alt="Brandbook eigen branding">
+                </a>
             </div>
             <div class="project-content">
                 <h3>Brandbook Luca Nollet</h3>
                 <span class="tag">Digital Branding</span>
-                <p>Tijdens het vak Digital Branding heb ik mijn eigen merk ontwikkeld, van concept tot visuele identiteit. Ik heb nagedacht over de doelgroep, de uitstraling en de waarden die mijn brand moet uitstralen. Daarnaast heb ik een logo, kleurenpalet en typografie uitgewerkt die allemaal samen één geheel vormen. Alles werd gebundeld in een brandbook waarin mijn merk duidelijk wordt voorgesteld. Als je op de afbeelding klikt, opent mijn brandbook en kan je mijn volledige uitwerking bekijken..</p>
+                <p>Tijdens het vak Digital Branding heb ik mijn eigen merk ontwikkeld, van concept tot visuele identiteit. Logo, kleurenpalet en typografie werden gebundeld in een brandbook. Klik op de afbeelding om het te bekijken.</p>
             </div>
         </div>
 
@@ -230,7 +226,6 @@
     </svg>
 </div>
 
-<!-- WPL2 Case -->
 <section id="wpl2" class="wpl2-sectie">
     <div class="wpl2-inhoud">
         <div class="wpl2-tekst">
@@ -258,6 +253,7 @@
         <div class="wpl2-media">
             <img src="Assets/logo%20CampusKarting.png" alt="Logo Campus Karting">
             <img src="Assets/MockupCampus.png" alt="Mockup Campus Karting">
+            <!-- Klikbare afbeelding die de brandbook PDF opent -->
             <a href="Assets/PDF/Brandbook-WPL2%20.pdf" target="_blank">
                 <img src="Assets/BrandbookPreview.png" alt="Brandbook Campus Karting">
             </a>
@@ -266,7 +262,6 @@
     </div>
 </section>
 
-<!-- Contact -->
 <section id="contact" class="contact">
     <img src="Assets/LogoIcon.png" alt="" class="mascotte-blob mascotte-contact" aria-hidden="true">
     <h2>Contact</h2>

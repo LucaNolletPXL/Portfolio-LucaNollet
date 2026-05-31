@@ -10,12 +10,9 @@
     --blue: #009BDB;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* flex-column + min-height zodat de footer altijd onderaan zit */
 body {
     font-family: 'corbel', sans-serif;
     background-color: var(--bg-dark);
@@ -26,55 +23,33 @@ body {
     min-height: 100vh;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
+a { text-decoration: none; color: inherit; }
 
 
 /* ===== NAVIGATIE ===== */
 
 header {
     padding: 1rem 3rem;
-    position: sticky;
-    top: 0;
+    position: sticky; top: 0;
     background: rgba(24, 16, 73, 0.95);
     backdrop-filter: blur(6px);
     z-index: 100;
     border-bottom: 3px solid var(--accent);
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
 
 .logo img { height: 48px; }
 
-.nav-links {
-    display: flex;
-    gap: 2rem;
-    font-weight: 600;
-}
+.nav-links { display: flex; gap: 2rem; font-weight: 600; }
 
-.nav-links a {
-    position: relative;
-    color: #F9EBD8;
-    font-size: 0.95rem;
-}
+.nav-links a { position: relative; color: #F9EBD8; font-size: 0.95rem; }
 
 .nav-links a::after {
     content: '';
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 0;
-    height: 2px;
-    background: var(--accent);
-    transition: 0.2s;
+    position: absolute; left: 0; bottom: -6px;
+    width: 0; height: 2px;
+    background: var(--accent); transition: 0.2s;
 }
 
 .nav-links a:hover::after { width: 100%; }
@@ -82,84 +57,45 @@ nav {
 
 /* ===== INHOUD ===== */
 
-main {
-    flex: 1;
-    max-width: 900px;
-    width: 100%;
-    margin: 5rem auto;
-    padding: 0 2rem;
-}
+/* flex: 1 duwt de footer naar beneden */
+main { flex: 1; max-width: 900px; width: 100%; margin: 5rem auto; padding: 0 2rem; }
 
 h1 {
     font-family: 'comic-serif-pro', serif;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    margin: 3rem 0 1rem;
-    color: var(--navy);
+    font-size: 2.5rem; text-transform: uppercase;
+    margin: 3rem 0 1rem; color: var(--navy);
     position: relative;
 }
 
-h1::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 3px;
-    background: var(--accent);
-    margin-top: 0.5rem;
-}
+/* Gele streep onder elke titel */
+h1::after { content: ""; display: block; width: 60px; height: 3px; background: var(--accent); margin-top: 0.5rem; }
 
-/* Stijl voor PDF- en ZIP-links */
+/* PDF- en ZIP-links krijgen een kaartstijl */
 a[href$=".pdf"],
 a[href$=".zip"] {
     display: block;
     background: var(--bg-light);
     border: 2px solid rgba(24, 16, 73, 0.1);
-    padding: 1.2rem;
-    border-radius: 14px;
-    margin-bottom: 2rem;
-    font-weight: 600;
+    padding: 1.2rem; border-radius: 14px;
+    margin-bottom: 2rem; font-weight: 600;
     transition: 0.2s;
 }
 
 a[href$=".pdf"]:hover,
-a[href$=".zip"]:hover {
-    border-color: var(--accent);
-    transform: translateY(-3px);
-    background: #fff3c4;
-}
+a[href$=".zip"]:hover { border-color: var(--accent); transform: translateY(-3px); background: #fff3c4; }
 
 
 /* ===== FOOTER ===== */
 
-footer {
-    padding: 2rem;
-    text-align: center;
-    background: var(--navy);
-    color: rgba(249, 235, 216, 0.6);
-    border-top: 3px solid var(--accent);
-}
+footer { padding: 2rem; text-align: center; background: var(--navy); color: rgba(249, 235, 216, 0.6); border-top: 3px solid var(--accent); }
 
 
 /* ===== RESPONSIVE ===== */
 
 @media (max-width: 768px) {
     header { padding: 1rem 1.5rem; }
-
-    nav {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-    }
-
-    main {
-        margin: 3rem auto;
-        padding: 0 1.5rem;
-    }
-
-    h1 { font-size: 2rem; }
+    nav    { flex-direction: column; gap: 1rem; }
+    .nav-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+    main   { margin: 3rem auto; padding: 0 1.5rem; }
+    h1     { font-size: 2rem; }
 }

@@ -1,5 +1,5 @@
 /* ===== TIJDLIJN DATA ===== */
-/* Voeg hier je eigen items toe of pas bestaande aan */
+/* Voeg items toe of pas aan — afbeelding is optioneel (null = geen foto) */
 
 const tijdlijnData = [
     {
@@ -30,6 +30,7 @@ const tijdlijnData = [
 
 
 /* ===== TIJDLIJN GENEREREN ===== */
+/* Maakt HTML-elementen aan op basis van tijdlijnData hierboven */
 
 function generateTimeline(data) {
     const container = document.querySelector('.timeline');
@@ -71,6 +72,7 @@ function generateTimeline(data) {
 
 
 /* ===== SCROLL ANIMATIE ===== */
+/* Voegt de klasse 'show' toe als een item in beeld scrollt */
 
 function animateTimeline() {
     const items = document.querySelectorAll('.timeline-item');
@@ -89,5 +91,4 @@ function animateTimeline() {
 }
 
 
-/* Start */
 generateTimeline(tijdlijnData);
